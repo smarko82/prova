@@ -18,4 +18,4 @@ jobs:
         run: |
           curl -X GET -H "Authorization: Bearer " \
             -H "Content-Type: application/json" \
-            https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}&start_date=2022-01-01&end_date=2022-01-31&owner=smarko82&repo=prova
+            https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}&owner=smarko82&repo=prova&start_date=2022-01-01&end_date=2022-01-31
