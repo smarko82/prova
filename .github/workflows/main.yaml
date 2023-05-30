@@ -16,7 +16,6 @@ jobs:
       - name: Invoke Lambda Function
         if: contains(github.event.issue.title, 'PROVA')
         run: |
-          curl -X GET -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          curl -X GET -H "Authorization: Bearer " \
             -H "Content-Type: application/json" \
-            -d '{"url": "URL_DELLA_TUA_FUNZIONE_LAMBDA"}' \
-            https://API_GATEWAY_ID.execute-api.REGION.amazonaws.com/STAGE/ENDPOINT
+            https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}&start_date=2022-01-01&end_date=2022-01-31
