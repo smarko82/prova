@@ -16,6 +16,6 @@ jobs:
       - name: Invoke Lambda Function
         if: contains(github.event.issue.title, 'PROVA')
         run: |
-          curl -X GET
-            -H "Content-Type: application/json" 
-            https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?owner=smarko82\&repo=prova&start_date=2022-01-01\&end_date=2022-01-31
+          curl -X GET -H "Authorization: Bearer " \
+            -H "Content-Type: application/json" \
+            https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}%26owner=smarko82%26repo=prova%26start_date=2022-01-01%26end_date=2022-01-31
