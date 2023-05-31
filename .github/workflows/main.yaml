@@ -16,5 +16,5 @@ jobs:
       - name: Invoke Lambda Function
         if: contains(github.event.issue.title, 'PROVA')
         run: |
-          curl -X GET https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=PROVA&owner=smarko82&repo=prova&start_date=2022-01-01send_date=2022-01-31
+          curl -X GET "https://aefnyrpj35isimutchazova3sq0vjpvu.lambda-url.us-east-1.on.aws/?GITHUB_TOKEN=PROVA&owner=smarko82&repo=prova&start_date=2022-01-01send_date=2022-01-31"
             
